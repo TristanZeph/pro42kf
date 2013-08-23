@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AA683B117C4A68300C4096D /* EventDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA683B017C4A68300C4096D /* EventDetailsVC.m */; };
 		6AF9688F17C48E180084FB98 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF9688E17C48E180084FB98 /* UIKit.framework */; };
 		6AF9689117C48E180084FB98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF9689017C48E180084FB98 /* Foundation.framework */; };
 		6AF9689317C48E180084FB98 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF9689217C48E180084FB98 /* CoreGraphics.framework */; };
@@ -33,9 +34,13 @@
 		6AF968F217C4901A0084FB98 /* Planner_Stock_Overlay_Expanded.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF968E317C4901A0084FB98 /* Planner_Stock_Overlay_Expanded.png */; };
 		6AF968F317C4901A0084FB98 /* Planner_Stock_Overlay_SingleTile.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF968E417C4901A0084FB98 /* Planner_Stock_Overlay_SingleTile.png */; };
 		6AF968F417C4901A0084FB98 /* Planner_Topbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF968E517C4901A0084FB98 /* Planner_Topbar.png */; };
+		6AF968F817C495AA0084FB98 /* PlannerTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF968F717C495AA0084FB98 /* PlannerTVC.m */; };
+		6AF968FF17C49B240084FB98 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF968FE17C49B240084FB98 /* Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6AA683AF17C4A68300C4096D /* EventDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailsVC.h; sourceTree = "<group>"; };
+		6AA683B017C4A68300C4096D /* EventDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailsVC.m; sourceTree = "<group>"; };
 		6AF9688B17C48E180084FB98 /* TravelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF9688E17C48E180084FB98 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6AF9689017C48E180084FB98 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +72,10 @@
 		6AF968E317C4901A0084FB98 /* Planner_Stock_Overlay_Expanded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Planner_Stock_Overlay_Expanded.png; sourceTree = "<group>"; };
 		6AF968E417C4901A0084FB98 /* Planner_Stock_Overlay_SingleTile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Planner_Stock_Overlay_SingleTile.png; sourceTree = "<group>"; };
 		6AF968E517C4901A0084FB98 /* Planner_Topbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Planner_Topbar.png; sourceTree = "<group>"; };
+		6AF968F617C495AA0084FB98 /* PlannerTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlannerTVC.h; sourceTree = "<group>"; };
+		6AF968F717C495AA0084FB98 /* PlannerTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlannerTVC.m; sourceTree = "<group>"; };
+		6AF968FD17C49B240084FB98 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		6AF968FE17C49B240084FB98 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +122,8 @@
 		6AF9689417C48E180084FB98 /* TravelApp */ = {
 			isa = PBXGroup;
 			children = (
+				6AF968F917C49A230084FB98 /* Classes */,
+				6AF968F517C4958D0084FB98 /* ViewControllers */,
 				6AF968D317C4901A0084FB98 /* App Assets */,
 				6AF9689D17C48E180084FB98 /* AppDelegate.h */,
 				6AF9689E17C48E180084FB98 /* AppDelegate.m */,
@@ -172,16 +183,36 @@
 		6AF968DD17C4901A0084FB98 /* Travel Planner */ = {
 			isa = PBXGroup;
 			children = (
+				6AF968E117C4901A0084FB98 /* Planner_ExampleTile1.png */,
 				6AF968DE17C4901A0084FB98 /* Art_Gallery_Stock.png */,
 				6AF968DF17C4901A0084FB98 /* Beastie_Gallery_Stock.png */,
 				6AF968E017C4901A0084FB98 /* Planner_BeastieStock.png */,
-				6AF968E117C4901A0084FB98 /* Planner_ExampleTile1.png */,
 				6AF968E217C4901A0084FB98 /* Planner_ExampleTile2.png */,
 				6AF968E317C4901A0084FB98 /* Planner_Stock_Overlay_Expanded.png */,
 				6AF968E417C4901A0084FB98 /* Planner_Stock_Overlay_SingleTile.png */,
 				6AF968E517C4901A0084FB98 /* Planner_Topbar.png */,
 			);
 			path = "Travel Planner";
+			sourceTree = "<group>";
+		};
+		6AF968F517C4958D0084FB98 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6AF968F617C495AA0084FB98 /* PlannerTVC.h */,
+				6AF968F717C495AA0084FB98 /* PlannerTVC.m */,
+				6AA683AF17C4A68300C4096D /* EventDetailsVC.h */,
+				6AA683B017C4A68300C4096D /* EventDetailsVC.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6AF968F917C49A230084FB98 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6AF968FD17C49B240084FB98 /* Event.h */,
+				6AF968FE17C49B240084FB98 /* Event.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +299,9 @@
 				6AF9689B17C48E180084FB98 /* main.m in Sources */,
 				6AF9689F17C48E180084FB98 /* AppDelegate.m in Sources */,
 				6AF968AB17C48E180084FB98 /* ViewController.m in Sources */,
+				6AF968F817C495AA0084FB98 /* PlannerTVC.m in Sources */,
+				6AF968FF17C49B240084FB98 /* Event.m in Sources */,
+				6AA683B117C4A68300C4096D /* EventDetailsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
